@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VASTELLO | The Future of Clothing</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts for Luxury Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcfbfa;
+            color: #1a2433;
+            overflow-x: hidden;
+        }
+        .serif-title {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Elite Luxury Cream/Linen Fluid Gradient Background Animation */
+        @keyframes fluidBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-bg {
+            background: linear-gradient(-45deg, #fcfbfa, #f5f2eb, #ece7dc, #fbfaf7);
+            background-size: 400% 400%;
+            animation: fluidBg 14s ease infinite;
+        }
+        /* Scroll reveal class defaults */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-in-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="animated-bg min-h-screen flex flex-col justify-between">
+
+    <!-- 1. 3-SECOND SPLASH SCREEN (TEXT ONLY - NO LOGO) -->
+    <div id="splash-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#fcfbfa] transition-all duration-700 ease-in-out">
+        <div class="text-center opacity-0 transition-opacity duration-1000 px-4" id="splash-content">
+            <h1 class="serif-title text-5xl md:text-7xl tracking-[0.35em] font-light text-[#101f42]">VASTELLO</h1>
+            <div class="w-16 h-[1px] bg-[#101f42]/40 mx-auto mt-4 mb-2 animate-pulse"></div>
+            <p class="text-[9px] tracking-[0.5em] text-amber-800/80 uppercase font-medium">EST. 2026</p>
+        </div>
+    </div>
+
+    <!-- 2. GLOBAL FIXED NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-[#fcfbfa]/75 backdrop-blur-md border-b border-[#101f42]/5 px-4 md:px-10 py-5 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-5">
+            <!-- CRITICAL CHANGE: Significantly upscaled logo dimensions for high-visibility -->
+            <img src="logo.png" alt="Vastello Logo" class="h-20 md:h-28 w-auto object-contain transition-transform duration-300 hover:scale-105 filter drop-shadow-md">
+            <span class="serif-title text-2xl md:text-4xl tracking-[0.2em] font-semibold text-[#101f42]">VASTELLO</span>
+        </a>
+        
+        <!-- Hamburger Index Icon styled for light theme -->
+        <button id="menu-btn" class="flex flex-col gap-1.5 justify-center items-center w-8 h-8 group cursor-pointer focus:outline-none" aria-label="Toggle Menu">
+            <span class="w-6 h-[1.5px] bg-[#101f42] transition-all duration-300 group-hover:w-5"></span>
+            <span class="w-6 h-[1.5px] bg-amber-800 transition-all duration-300"></span>
+            <span class="w-6 h-[1.5px] bg-[#101f42] transition-all duration-300 group-hover:w-4"></span>
+        </button>
+    </header>
+
+    <!-- SLIDE-OUT INDEX DRAWER (Light Mode Minimalist) -->
+    <div id="menu-drawer" class="fixed inset-0 z-40 bg-[#fcfbfa]/98 border-l border-[#101f42]/5 translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-10 md:p-16 pt-44">
+        <nav class="flex flex-col gap-8 text-left">
+            <a href="#home" class="drawer-link serif-title text-3xl md:text-5xl tracking-widest text-zinc-400 hover:text-[#101f42] transition-colors duration-300">HOME</a>
+            <a href="#about" class="drawer-link serif-title text-3xl md:text-5xl tracking-widest text-zinc-400 hover:text-[#101f42] transition-colors duration-300">ABOUT</a>
+            <a href="#vasto-designer" class="drawer-link serif-title text-3xl md:text-5xl tracking-widest text-zinc-400 hover:text-[#101f42] transition-colors duration-300">VASTO DESIGNER</a>
+        </nav>
+        <div class="border-t border-[#101f42]/10 pt-6">
+            <a href="#support" class="drawer-link text-xs md:text-sm tracking-[0.2em] text-zinc-500 hover:text-[#101f42] transition-colors duration-300">SUPPORT & HELP</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow pt-36 md:pt-44">
+
+        <!-- SECTION 1: HOMEPAGE (COMING SOON) -->
+        <section id="home" class="min-h-[calc(100vh-11rem)] flex flex-col justify-center items-center text-center px-4 relative">
+            <div class="max-w-4xl">
+                <!-- Clean, dark editorial typography text layout -->
+                <h2 class="serif-title text-5xl md:text-8xl font-light tracking-[0.25em] text-[#101f42] mb-6 uppercase drop-shadow-sm">
+                    Coming Soon
+                </h2>
+                <div class="w-24 h-[1.5px] bg-gradient-to-r from-amber-700 to-[#101f42] mx-auto mb-6"></div>
+                <p class="text-[10px] md:text-xs uppercase tracking-[0.4em] text-zinc-500 font-semibold">
+                    Architectural Tailoring &bull; High-End Engineering Matrix
+                </p>
+            </div>
+            
+            <!-- Animated Scroll Down Indicator with warm earth tone line -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-80 animate-bounce">
+                <span class="text-[9px] tracking-[0.3em] uppercase font-semibold text-zinc-400">Scroll</span>
+                <span class="w-[1.5px] h-8 bg-gradient-to-b from-amber-700 to-transparent"></span>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT SECTION -->
+        <section id="about" class="reveal min-h-screen flex flex-col justify-center px-6 md:px-24 max-w-5xl mx-auto py-20 border-t border-[#101f42]/5">
+            <span class="text-[10px] tracking-[0.5em] text-amber-800 font-semibold uppercase mb-4 block">01 / IDENTITY</span>
+            <h3 class="serif-title text-3xl md:text-5xl font-light tracking-wide text-[#101f42] mb-8">The Future of Clothing</h3>
+            <p class="text-sm md:text-base text-zinc-600 leading-relaxed font-light tracking-wide max-w-3xl mb-12">
+                Vastello marks the end of standard compromises. We reject ordinary mass production to create an architectural evolution in garments. Built on a genderless foundation of absolute symmetry, heavy premium structural material matrices, and rich sophisticated color tones, our identity is tailored for those who demand pure precision and tactile excellence.
+            </p>
+            <div class="border-t border-[#101f42]/10 pt-6">
+                <p class="text-xs tracking-[0.2em] text-amber-800 uppercase font-medium">Owner of Vastello</p>
+                <p class="serif-title text-xl md:text-2xl text-[#101f42] font-normal tracking-wider mt-1">Mihir Kanchan</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: VASTO DESIGNER SECTION -->
+        <section id="vasto-designer" class="reveal min-h-screen flex flex-col justify-center px-6 md:px-24 max-w-5xl mx-auto py-20 border-t border-[#101f42]/5">
+            <span class="text-[10px] tracking-[0.5em] text-amber-800 font-semibold uppercase mb-4 block">02 / TECHNOLOGY</span>
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4 mb-6">
+                <h3 class="serif-title text-4xl md:text-6xl font-light tracking-wide text-[#101f42]">Vasto Designer</h3>
+                <!-- Sophisticated Luxury Badge -->
+                <span class="inline-block border border-amber-800/30 px-4 py-1 text-[9px] tracking-[0.2em] uppercase font-medium rounded-full text-amber-900 w-max bg-amber-500/5">
+                    Status: Coming Soon
+                </span>
+            </div>
+            <p class="serif-title text-lg md:text-2xl italic text-zinc-500 font-light tracking-wide mb-8">
+                "AI-Powered Precision Customization."
+            </p>
+            <p class="text-sm md:text-base text-zinc-600 leading-relaxed font-light tracking-wide max-w-3xl">
+                A highly advanced configuration engine designed to grant complete visual sovereignty back to the creator. From custom heavy loopback cottons to hyper-detailed, high-density structural embroidery and normal heat press applications, the Vasto Engine lets you articulate and command exactly where your imagination sits on the fabric matrix.
+            </p>
+        </section>
+
+        <!-- SECTION 4: SUPPORT SECTION -->
+        <section id="support" class="reveal bg-zinc-100/40 py-20 px-6 md:px-24 border-t border-[#101f42]/5">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+                <div>
+                    <h4 class="serif-title text-2xl md:text-3xl font-light tracking-wide text-[#101f42] mb-4">Support & Inquiries</h4>
+                    <p class="text-xs md:text-sm text-zinc-500 font-light tracking-wide max-w-md">
+                        Have questions about the Vasto Engine framework, corporate alignments, or upcoming drop mechanics? Reach out to our customer concierge interface.
+                    </p>
+                </div>
+                <div class="w-full md:w-auto">
+                    <!-- Clean minimal button tailored for light theme luxury -->
+                    <a href="mailto:vastello.india@gmail.com" class="group block w-full text-center border border-[#101f42]/30 hover:border-[#101f42] px-8 py-4 text-xs tracking-[0.3em] uppercase font-semibold transition-all duration-300 bg-[#101f42]/5 hover:bg-[#101f42] text-[#101f42] hover:text-white rounded shadow-sm">
+                        vastello.india@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER STAMP -->
+    <footer class="w-full text-center py-6 border-t border-[#101f42]/5 bg-[#f5f2eb]/40 text-[10px] tracking-[0.2em] text-zinc-400 uppercase font-light">
+        &copy; 2026 Vastello. All Rights Reserved. Engineered Aesthetics.
+    </footer>
+
+    <!-- INTERACTION & ANIMATION JAVASCRIPT -->
+    <script>
+        // 1. Splash Screen Fade In and Auto-Timeout After 3 Seconds
+        window.addEventListener('DOMContentLoaded', () => {
+            const splashContent = document.getElementById('splash-content');
+            const splashScreen = document.getElementById('splash-screen');
+            
+            splashContent.classList.remove('opacity-0');
+            splashContent.classList.add('opacity-100');
+            
+            setTimeout(() => {
+                splashScreen.classList.add('opacity-0', 'pointer-events-none');
+            }, 3000);
+        });
+
+        // 2. Navigation Menu Toggle Mechanics
+        const menuBtn = document.getElementById('menu-btn');
+        const menuDrawer = document.getElementById('menu-drawer');
+        const drawerLinks = document.querySelectorAll('.drawer-link');
+
+        function toggleMenu() {
+            menuDrawer.classList.toggle('translate-x-full');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuDrawer.classList.add('translate-x-full');
+            });
+        });
+
+        // 3. Scroll Reveal Engine
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1
+        });
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
